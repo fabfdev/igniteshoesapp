@@ -25,6 +25,8 @@
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
         <data android:scheme="com.rocketseat.igniteshoesapp"/>
+        <data android:scheme="igniteshoesapp"/>
+        <data android:scheme="exp+igniteshoesapp"/>
       </intent-filter>
     </activity>
   </application>

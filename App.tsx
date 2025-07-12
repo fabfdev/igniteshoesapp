@@ -6,6 +6,7 @@ import {
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
 import { NotificationClickEvent, OneSignal } from "react-native-onesignal";
+import * as Linking from "expo-linking";
 
 import { Routes } from "./src/routes";
 
@@ -30,19 +31,7 @@ export default function App() {
 
   useEffect(() => {
     const handleNotificationClick = (event: NotificationClickEvent): void => {
-      const { actionId } = event.result;
-
-      switch (actionId) {
-        case "1":
-          console.log("ver todos");
-          break;
-        case "2":
-          console.log("ver pedido");
-          break;
-        default:
-          console.log("nenhum selecionado");
-          break;
-      }
+      console.log(event.notification)
     };
 
     OneSignal.Notifications.addEventListener("click", handleNotificationClick);
